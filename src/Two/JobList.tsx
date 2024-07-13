@@ -44,7 +44,7 @@ const JobList = () => {
         </button>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-rose-50 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-rose-50 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -62,7 +62,7 @@ const JobList = () => {
           <span>Furniture</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-fuchsia-100 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-fuchsia-100 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -80,7 +80,7 @@ const JobList = () => {
           <span>Bell</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-indigo-50 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-indigo-50 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -98,7 +98,7 @@ const JobList = () => {
           <span>Computer</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -116,7 +116,7 @@ const JobList = () => {
           <span>Academic</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-violet-200 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-violet-200 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -134,7 +134,7 @@ const JobList = () => {
           <span>Book</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -152,7 +152,7 @@ const JobList = () => {
           <span>Currency</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-amber-100 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-amber-100 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -170,7 +170,7 @@ const JobList = () => {
           <span>Clould</span>
         </div>
 
-        <div className="item flex flex-col items-center gap-1 rounded-lg bg-red-200 p-6 hover:shadow-lg">
+        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-red-200 p-6 hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
