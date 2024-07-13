@@ -1,4 +1,65 @@
-const JobList = () => {
+import Academic from "../assets/icons/Academic";
+import Bell from "../assets/icons/Bell";
+import Book from "../assets/icons/Book";
+import Clould from "../assets/icons/Clould";
+import Computer from "../assets/icons/Computer";
+import Currency from "../assets/icons/Currency";
+import Gift from "../assets/icons/Gift";
+import Home from "../assets/icons/Home";
+import ItemJobList, { JobProps } from "../Components/Two/ItemJobList";
+import React from "react";
+
+const jobItems: JobProps[] = [
+  {
+    bgClass: "bg-rose-50",
+    icon: <Home />,
+    title: "Furniture",
+  },
+
+  {
+    bgClass: "bg-fuchsia-100",
+    icon: <Bell />,
+    title: "Bell",
+  },
+
+  {
+    bgClass: "bg-indigo-50",
+    icon: <Book />,
+    title: "Book",
+  },
+
+  {
+    bgClass: "bg-teal-100",
+    icon: <Clould />,
+    title: "Clould",
+  },
+
+  {
+    bgClass: "bg-lime-100",
+    icon: <Computer />,
+    title: "Computer",
+  },
+
+  {
+    bgClass: "bg-violet-200",
+    icon: <Currency />,
+    title: "Currency",
+  },
+
+  {
+    bgClass: "bg-amber-100",
+    icon: <Gift />,
+    title: "Gift",
+  },
+
+  {
+    bgClass: "bg-rose-50",
+    icon: <Academic />,
+    title: "Academic",
+  },
+];
+
+const JobList: React.FC = (): JSX.Element => {
   return (
     <div className="flex flex-col gap-8 rounded-3xl bg-white p-[72px] shadow-lg">
       <div className="flex justify-between gap-3">
@@ -44,149 +105,15 @@ const JobList = () => {
         </button>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-rose-50 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        {jobItems.map(
+          (item: JobProps): React.ReactElement => (
+            <ItemJobList
+              bgClass={item.bgClass}
+              icon={item.icon}
+              title={item.title}
             />
-          </svg>
-          <span>Furniture</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-fuchsia-100 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-            />
-          </svg>
-          <span>Bell</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-indigo-50 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-            />
-          </svg>
-          <span>Computer</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
-            />
-          </svg>
-          <span>Academic</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-violet-200 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-            />
-          </svg>
-          <span>Book</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-teal-100 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
-          </svg>
-          <span>Currency</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-amber-100 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"
-            />
-          </svg>
-          <span>Clould</span>
-        </div>
-
-        <div className="item flex cursor-pointer flex-col items-center gap-1 rounded-lg bg-red-200 p-6 hover:shadow-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
-            />
-          </svg>
-          <span>Gift</span>
-        </div>
+          ),
+        )}
       </div>
     </div>
   );
