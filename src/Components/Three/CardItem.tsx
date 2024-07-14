@@ -21,28 +21,42 @@ const CardItem: React.FC<CardItemProps> = ({
     return quantity.toString();
   };
   return (
-    <div className="w-full rounded-3xl bg-white p-6">
+    <div className="w-full rounded-3xl bg-white p-6 transition-shadow duration-500 ease-in-out hover:shadow-lg">
       <img
         className="h-[268px] w-full rounded-3xl object-cover"
         src={imgs[0].src}
         alt={`${tagName}-img-${imgs[0].id}`}
       />
-      <div className="mt-4 grid grid-cols-3 gap-4">
+      <div className="mt-4 grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <img
           className="h-[97px] w-full rounded-3xl object-cover"
           src={imgs[1].src}
           alt={`${tagName}-img-${imgs[1].id}`}
         />
-        <img
-          className="h-[97px] w-full rounded-3xl object-cover"
-          src={imgs[2].src}
-          alt={`${tagName}-img-${imgs[2].id}`}
-        />
-        <img
-          className="h-[97px] w-full rounded-3xl object-cover"
-          src={imgs[3].src}
-          alt={`${tagName}-img-${imgs[3].id}`}
-        />
+
+        <div className="relative inline-block">
+          <img
+            className="h-[97px] w-full rounded-3xl object-cover"
+            src={imgs[2].src}
+            alt={`${tagName}-img-${imgs[2].id}`}
+          />
+
+          <div className="absolute inset-0 hidden items-center justify-center rounded-3xl bg-black bg-opacity-50 sm:flex sm:cursor-pointer md:hidden md:cursor-none">
+            <p className="text-xl font-bold text-white">. . .</p>
+          </div>
+        </div>
+
+        <div className="relative inline-block sm:hidden md:inline-block">
+          <img
+            className="h-[97px] w-full rounded-3xl object-cover"
+            src={imgs[3].src}
+            alt={`${tagName}-img-${imgs[3].id}`}
+          />
+
+          <div className="absolute inset-0 flex cursor-pointer items-center justify-center rounded-3xl bg-black bg-opacity-50">
+            <p className="text-xl font-bold text-white">. . .</p>
+          </div>
+        </div>
       </div>
 
       <div className="mt-6 flex gap-4">
