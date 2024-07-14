@@ -82,12 +82,12 @@ const carList: CardItemProps[] = [
 
 const Collection = () => {
   return (
-    <div className="rounded-[26px] bg-gray-100 p-[62px]">
-      <h2 className="font-merri text-[32px] font-bold text-slate-900">
+    <div className="rounded-[26px] bg-gray-100 p-6 lg:p-10">
+      <h2 className="font-merri text-[28px] font-bold text-slate-900 sm:text-[32px]">
         Popular Collections
       </h2>
 
-      <div className="mt-6 space-x-2">
+      <div className="mt-6 flex flex-wrap gap-2">
         {tagList.map(
           (tag: string): React.ReactElement => (
             <TagItem text={tag} />
@@ -95,7 +95,7 @@ const Collection = () => {
         )}
       </div>
 
-      <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:gap-16">
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 sm:grid-cols-2 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
         {carList.map(
           (item: CardItemProps): React.ReactElement => (
             <CardItem
