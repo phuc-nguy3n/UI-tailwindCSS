@@ -3,7 +3,7 @@ import RadioField from "../Components/Four/RadioField";
 import StarRating from "../Components/Four/StarRating";
 import "./ReviewForm.css";
 
-const ReviewForm = () => {
+const ReviewForm: React.FC = (): JSX.Element => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Handle submit");
