@@ -80,7 +80,7 @@ const carList: CardItemProps[] = [
   },
 ];
 
-const Collection = () => {
+const Collection: React.FC = (): JSX.Element => {
   return (
     <div className="rounded-[26px] bg-gray-100 p-6 lg:p-10">
       <h2 className="font-merri text-[28px] font-bold text-slate-900 sm:text-[32px]">
