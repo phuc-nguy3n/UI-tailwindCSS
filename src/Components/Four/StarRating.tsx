@@ -5,7 +5,7 @@ const StarRating = (): React.ReactElement => {
   const [hover, setHover] = useState<number | null>(null);
   return (
     <div className="mt-4 flex gap-1">
-      {[1, 2, 3, 4, 5].map((star) => {
+      {[1, 2, 3, 4, 5].map((star: number) => {
         const isFilled = star <= (hover ?? rating ?? 0);
         return (
           <div
@@ -21,7 +21,7 @@ const StarRating = (): React.ReactElement => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className={`h-8 w-8 ${isFilled ? "text-yellow-500" : "text-gray-400"}`}
+              className={`h-8 w-8 ${isFilled ? "fill-yellow-500 text-yellow-500" : "text-gray-400"}`}
             >
               <path
                 strokeLinecap="round"
