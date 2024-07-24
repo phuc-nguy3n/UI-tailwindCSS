@@ -1,4 +1,4 @@
-const UserProfile = () => {
+const UserProfile: React.FC = (): JSX.Element => {
   return (
     <div className="relative">
       <div className="relative z-10 flex w-[562px] gap-4 rounded-[25px] bg-white p-[50px]">
@@ -33,7 +33,7 @@ const UserProfile = () => {
                 />
               </svg>
 
-              <span className="font-popi inline text-base font-normal text-blue-950">
+              <span className="inline font-popi text-base font-normal text-blue-950">
                 4.7 Rating
               </span>
             </div>
@@ -54,7 +54,7 @@ const UserProfile = () => {
                 />
               </svg>
 
-              <span className="font-popi inline text-base font-normal text-blue-950">
+              <span className="inline font-popi text-base font-normal text-blue-950">
                 4,447 Reviews
               </span>
             </div>
@@ -75,7 +75,7 @@ const UserProfile = () => {
                 />
               </svg>
 
-              <span className="font-popi inline text-base font-normal text-blue-950">
+              <span className="inline font-popi text-base font-normal text-blue-950">
                 478 Students
               </span>
             </div>
@@ -87,14 +87,14 @@ const UserProfile = () => {
           </div>
 
           <div className="">
-            <button className="font-popi rounded border-2 border-slate-300 p-2.5 font-medium text-blue-950">
+            <button className="rounded border-2 border-slate-300 p-2.5 font-popi font-medium text-blue-950">
               Show more
             </button>
           </div>
         </div>
       </div>
 
-      <div className="left-cusTome absolute top-[20px] z-0 h-[599px] w-[511px] translate-x-1/2 rounded-[25px] bg-sky-100"></div>
+      <div className="absolute left-cusTome top-[20px] z-0 h-[599px] w-[511px] translate-x-1/2 rounded-[25px] bg-sky-100"></div>
     </div>
   );
 };
